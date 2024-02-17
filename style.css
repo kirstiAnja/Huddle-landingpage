@@ -1,0 +1,246 @@
+:root{
+
+      --Violet:hsl(257, 40%, 49%);
+      --Soft-Magenta:hsl(300, 69%, 71%);
+      --shadow:#121212;
+}    
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+} 
+    
+@font-face{
+      font-family: openSans;
+      src: url(fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
+} 
+
+@font-face{
+      font-family: poppins;
+      src: url(fonts/Poppins/Poppins-Regular.ttf)
+}
+
+html{
+      font-family: poppins;
+}
+
+body{
+      /* position: relative; */
+      background-color: #282121;
+      /* give space for the footer 
+      min-height: 90vh;*/
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+main{
+      background-color:var(--Violet);
+      width: 90.625rem;
+      background-image:
+      url(images/bg-desktop.svg);
+      /* Resize background */
+      background-size: 92% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 3.4375rem 4.6875rem 2.1875rem 4.6875rem; 
+}
+
+.illustration{
+      width: 55%;
+}
+
+.illustration > img{
+      width: 100%;
+}
+
+h1{ 
+      font-size: 2.4rem;
+      letter-spacing: 0.075rem;
+      line-height: 3.6rem;
+      color: whitesmoke;
+}
+
+p{
+      font-family: openSans;
+      letter-spacing: 0.075rem;
+      line-height: 1.7rem;
+      color: whitesmoke;
+      margin-top: 1.4375rem;
+}
+
+button{
+      background-color: whitesmoke;
+      color: var(--Violet);
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      padding: 1.0625rem 4rem;
+      border: 0;
+      border-radius: 2.5rem;
+      box-shadow: 0.125rem 0.125rem 0.625rem var(--shadow);
+}
+
+button:hover{
+      background-color: var(--Soft-Magenta);
+      color: whitesmoke;
+      cursor: pointer;
+}
+
+.logo{
+      width: 100%;
+      margin-bottom: 5.125rem;
+      margin-top: 0.25rem; 
+}
+
+.logo >img{
+      width: 16%;
+}
+
+
+.txt{
+      width: 45%;
+      height: fit-content;
+      padding-left: 3rem;
+      margin-top: 2.875rem;
+}
+
+.social-links{
+      width: 100%;
+      text-align: end;
+      padding-top: 0.625rem;
+}
+
+.social-links >a{
+      padding:0 0.315rem;   
+}
+
+@media(min-width: 801px) and (max-width:1149px){
+      main{
+            padding-left: 1.875rem;
+      }
+
+      .logo >img{
+            width: 35%;
+      }
+
+      .txt{
+            width: 35%;
+            margin-top: 0.5rem;
+            padding-left: 0.3rem;
+            text-align: center;
+      }
+
+      .illustration{
+            width: 65%;
+      }
+
+      .social-links{
+            width: 100%;
+            text-align: right;
+            padding-right: 2.5rem;
+            padding-top: 3.825rem;
+      }
+}
+
+@media(max-width:800px){
+      main{
+            width: 50rem;
+            background-image:url(images/bg-mobile.svg);
+            /* Resize background */
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding-top: 3.75rem;
+      }
+            
+      .illustration{
+            width: 100%;
+      }
+
+      .logo{
+            margin-bottom: 7.1rem;
+      }
+
+      .logo >img{
+            width: 43%;
+      }
+
+      .txt{
+            width: 100%;
+            margin-top: 7.5rem;
+            padding-left: 0.01rem;
+            text-align: center;
+      }
+
+      h1{
+             font-size: 3rem; 
+             line-height: 4.5rem; 
+      }
+
+      p{
+            font-size: 1.8rem;
+            letter-spacing: 0.065rem;
+            line-height: 3rem;
+            margin-top: 1.4375rem;
+      }
+
+      button{
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+            padding: 1.5625rem 10rem;
+      }
+
+      .social-links{
+            width: 100%;
+            text-align: center;
+            padding-top: 3.825rem;
+      }
+}
+
+@media (max-width:500px) {
+      main{
+            width: 25rem;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: grid;
+            justify-items: center;
+            padding-left: 0.625rem;
+            padding-right:0.625rem;
+      } 
+      .illustration{
+            width: 95%;
+      }
+
+      .txt{
+            width: 100%;
+            margin-top: 4rem;
+            font-size: smaller;
+      }
+      
+      p{
+            margin-top: 4rem;
+      }
+
+      button{
+            background-color: whitesmoke;
+            color: var(--Violet);
+            font-size: 1.1rem;
+            margin-top: 6rem;
+            padding: 1.0625rem 5rem;
+      }
+      .social-links{
+            padding-top:0.1rem
+      }
+}
+
+/* using color filter converter */
+.social-links a:focus{
+      filter: brightness(0) saturate(100%) invert(70%) sepia(54%) saturate(989%) hue-rotate(239deg) brightness(97%) contrast(88%);
+      cursor: pointer; 
+}
